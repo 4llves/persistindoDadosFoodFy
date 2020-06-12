@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% block head %}
+            <title>Foodfy</title>
+        {% endblock %}
+        
+        {% block style %}
+            <link rel="stylesheet" href="/styles.css">
+        {% endblock %}
+    </head>
+
+    <body>
+        <header>
+            {% block header %}
+                <a href="/site/index"><img src="/logo.png" alt=""></a>
+                <div class="menu">
+                    <a href="/admin/recipes/index">RECEITAS</a>
+                    <a href="/admin/chefs/index">CHEFS</a>
+                </div>
+            {% endblock header %}
+        </header>
+        
+        <div class="wrapper">
+            {% block content %}{% endblock %}
+        </div>
+
+        <footer>
+            Todos direitos reservados, receitas Foodfy.
+        </footer>
+
+        <script src="/scripts.js"></script>
+
+    </body>
+
+</html>
