@@ -1,6 +1,5 @@
 const express = require('express') // Importando o 'express"
 const routes = express.Router() // Metodo do Express para deixar responsavel pelas rotas
-const admin = require('./app/controllers/admin')
 const recipes = require('./app/controllers/recipes')
 const chefs = require('./app/controllers/chefs')
 const home = require('./app/controllers/home')
@@ -14,9 +13,6 @@ routes.get('/', function (req, res) {
 routes.get("/site/index", home.index); // Mostrar a pagina inicial
 routes.get("/site/chefs", home.indexChef); // Mostrar a lista de chefs para users
 routes.get("/site/recipes", home.indexRecipe); // Mostrar a lista de receitas para users
-
-//ADMIN
-routes.get("/admin/index", admin.index); // Pag de Login algo assim
 
 //ADMIN-RECIPES
 routes.get("/admin/recipes/index", recipes.index); // Mostrar a lista de receitas (admin)
