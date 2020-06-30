@@ -19,13 +19,19 @@
                     <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
                     <div class="inCard">
                         <h2>{{ recipe.title }}</h2>
-                        <p>por {{ recipe.chefName }}</p>
+                        <p>por {{ recipe.chefname }}</p>
                         <a href="/admin/recipes/index/{{ recipe.id }}">Visualizar</a>
                     </div>
                 </div>
             {% endfor %}        
         </div>
     </main>
+
+    <div class="pagination"
+        data-page = {{pagination.page}}
+        data-total = {{pagination.total}}
+        data-filter = {{filter}}
+    ></div>
 
 
 {% endblock %}

@@ -12,22 +12,22 @@
         <div class="chef-header">
             <img src="{{ chef.avatar_url }}" alt="{{ chef.title }}">
             <h1>{{ chef.name }}</h1>
-            <h2>{{ chef.total_recipes }} receitas</h2>
+            <h2>{{ chef.total_recipes }} receitas</h2>            
         </div>
 
 
         <h1>Receitas</h1>
-        <div class="container-chef-show">            
-            {% for recipe in recipes %}
+        <div class="container-chef-show">
+            {% for recipe in chefsRecipes %}
                 <div class="card">
-                    <img src="{{ chef.avatar_url }}" alt="{{ chef.title }}">
+                    <img src="{{ recipe.image }}" alt="{{ title }}">
                     <div class="inCard">
-                        <h2>{{ chef.title }}</h2>
-                        <p> por {{ chef.name }}</p>
-                        <a href="/admin/recipes/index/{{ chef.id }}">Visualizar</a>
+                        <h2>{{ recipe.title }}</h2>
+                        <p> por {{ recipe.chefname }}</p>
+                        <a href="/admin/recipes/index/{{ recipe.id }}">Visualizar</a>
                     </div>
-                </div>                
-            {% endfor %}        
+                </div>
+            {% endfor %}
         </div>
 
 </div>

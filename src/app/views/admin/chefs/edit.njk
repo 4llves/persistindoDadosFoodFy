@@ -4,13 +4,17 @@
 
 
 <div class="top-headerEdit">
-    <h1>Editando Receita</h1>                    
-    <form id="form-delete" action="/admin/chefs/index/{{chefs.id}}?_method=DELETE" method="POST">
+    <h1>Editando Chef</h1>
+    
+    <form
+        id="form-delete"
+        action="/admin/chefs/index/{{chefs.id}}?_method=DELETE"
+        method="POST">
     <input type="hidden" name="id" value={{chef.id}}>
-    <button type="submit">Deletar</button>
+    <button type="submit">Deletar</button>     
     </form>
 
-    <button form="update" type="submit">Salvar Receita</button>
+    <button form="update" type="submit">Salvar Chef</button>
 </div>
 
 <form id="update" method="POST" action="/admin/chefs/index/{{chefs.id}}/edit?_method=PUT">      
@@ -26,8 +30,8 @@
 
 <script>
     const formDelete = document.querySelector("#form-delete")
-    formDelete.addEventListener("submit", function (event) {
-        const confirmation = confirm("Deseja Deletar?")
+    formDelete.addEventListener("submit", function (event) {        
+        const confirmation = confirm("Deseja Deletar?")  
         if (!confirmation) {
             event.preventDefault()
         }

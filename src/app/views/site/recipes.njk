@@ -30,16 +30,22 @@
 
 {% block content %}
 
-      <main>        
+   <main>
         <div class="content">
-            {% for item in items %}
-            <div class="card" id="{{ item.title }}">
-                <a href="/recipes/{{item.index}}"><img src="{{ item.image }}" alt="Imagens de {{ item.title }}"></a>
-                <h4 class="name_recet">{{ item.title }}</h4>
-                <p class="name_chef">{{ item.author }}</p>
+            {% for recipe in recipes %}
+            <div class="card" id="{{ recipe.title }}">
+                <a href="/site/show/{{recipe.id}}"><img src="{{ recipe.image }}" alt="Imagens de {{ recipe.title }}"></a>
+                <h4 class="name_recet">{{ recipe.title }}</h4>
+                <p class="name_chef">Por {{ recipe.chefname }}</p>
             </div>
             {% endfor %}
         </div>
     </main>
+
+    <div class="pagination"
+        data-page = {{pagination.page}}
+        data-total = {{pagination.total}}
+        data-filter = {{filter}}
+    ></div>
 
 {% endblock %}

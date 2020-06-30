@@ -38,6 +38,30 @@ header {
     color: #999999;
 }
 
+.menu a.active {
+    font-weight: bold;
+    color: #FFF;
+}
+
+.menu a:hover {
+    color: #FFF;
+}
+
+.menu a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.menu a:hover::after{
+    width: 100%;
+    transition: width 500ms cubic-bezier(0.1, 0.92, 0.69, 0.41); /*animation*/
+}
+
 .wrapper {
     width: 940px;
     margin: 0 auto;
@@ -442,4 +466,24 @@ button[type="submit"] {
     font-size: 14px;
     color: #777777;
     margin-bottom: 10px;
+}
+
+/*PAGINATION*/
+.pagination {
+    margin-top: 15px;
+    align-self: end;
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    color: #6558C3;
+    text-decoration: none;
+    margin-right: 16px;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid black;
 }

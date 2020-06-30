@@ -13,6 +13,7 @@ routes.get('/', function (req, res) {
 routes.get("/site/index", home.index); // Mostrar a pagina inicial
 routes.get("/site/chefs", home.indexChef); // Mostrar a lista de chefs para users
 routes.get("/site/recipes", home.indexRecipe); // Mostrar a lista de receitas para users
+routes.get("/site/show/:id", home.showRecipes); // Mostrar detalhes da receita
 
 //ADMIN-RECIPES
 routes.get("/admin/recipes/index", recipes.index); // Mostrar a lista de receitas (admin)
