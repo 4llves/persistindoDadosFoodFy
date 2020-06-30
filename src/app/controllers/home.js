@@ -7,7 +7,7 @@ module.exports = {
         
         if ( filter ) {
             Recipe.findBy(filter, function(recipes){
-                // console.log(recipes)
+                // console.log(recipes) 
                 return res.render("site/recipes", { recipes })
             })
         } else {

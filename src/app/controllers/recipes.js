@@ -53,7 +53,7 @@ module.exports = {
 
             recipe.created_at = date(recipe.created_at).format
             
-            return res.render('admin/recipes/show', { recipe })
+            return res.render('admin/recipes/show', { recipe }) 
             
         })
     },

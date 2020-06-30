@@ -109,6 +109,6 @@ module.exports = {
     })
   },
   paginate(params) {
-    //SEM
+    //SEM PAGINACAO
   }
 }
